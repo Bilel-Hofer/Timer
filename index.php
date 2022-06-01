@@ -4,6 +4,7 @@
  * Date: 01/06/2022
  */
 
+
 require 'inc/config.php';
 ?>
 <!doctype html>
