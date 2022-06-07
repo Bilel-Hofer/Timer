@@ -4,14 +4,30 @@ html, body {
 }
 body {
     padding: 30px;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     box-sizing: border-box;
 }
+
+button {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #60666d;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #60666d;
+    transition: 500ms;
+}
+
 .select-box {
     position: relative;
-    display: block;
+    display: inline-block;
     width: 100%;
-    margin: 0 auto;
+    margin: 10px;
     font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
     font-size: 18px;
     color: #60666d;

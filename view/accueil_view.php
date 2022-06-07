@@ -49,7 +49,7 @@
                 </li>
             </ul>
         </div>
-        <input type="submit" value="Launch">
+        <button type="submit" class="fill">Launch</button>
     </form>
 
 <?php include VIEW_PART_DIR.'footer.php'?>
