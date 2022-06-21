@@ -12,28 +12,9 @@ const min = parseInt(document.getElementById('min').outerText);
 // initialisation des delay
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-// arrête les animations
-const pause10Min = async () => {
-    await delay(540000);
-    minWrapperOne.style.animation = 'none';
-    minWrapperOne.offsetHeight;
-    await delay(50000);
-    secWrapperTens.style.animation = 'none';
-    secWrapperTens.offsetHeight;
-    await delay(9000);
-    secWrapperOne.style.animation = 'none';
-    secWrapperOne.offsetHeight;
-    await delay(900);
-    hunWrapperTens.style.animation = 'none';
-    hunWrapperTens.offsetHeight;
-    await delay(90);
-    hunWrapperOne.style.animation = 'none';
-    hunWrapperOne.offsetHeight;
-};
-
-// arrête les animations
-const pause20Min = async () => {
-    await delay(600000);
+// arrêt les animations
+const pauseMin = async (d) => {
+    await delay(d);
     minWrapperTens.style.animation = 'none';
     minWrapperTens.offsetHeight;
     await delay(540000);
@@ -51,109 +32,19 @@ const pause20Min = async () => {
     await delay(90);
     hunWrapperOne.style.animation = 'none';
     hunWrapperOne.offsetHeight;
-};
-
-// arrête les animations
-const pause30Min = async () => {
-    await delay(1200000);
-    minWrapperTens.style.animation = 'none';
-    minWrapperTens.offsetHeight;
-    await delay(540000);
-    minWrapperOne.style.animation = 'none';
-    minWrapperOne.offsetHeight;
-    await delay(50000);
-    secWrapperTens.style.animation = 'none';
-    secWrapperTens.offsetHeight;
-    await delay(9000);
-    secWrapperOne.style.animation = 'none';
-    secWrapperOne.offsetHeight;
-    await delay(900);
-    hunWrapperTens.style.animation = 'none';
-    hunWrapperTens.offsetHeight;
-    await delay(90);
-    hunWrapperOne.style.animation = 'none';
-    hunWrapperOne.offsetHeight;
-};
-
-// arrête les animations
-const pause40Min = async () => {
-    await delay(1800000);
-    minWrapperTens.style.animation = 'none';
-    minWrapperTens.offsetHeight;
-    await delay(540000);
-    minWrapperOne.style.animation = 'none';
-    minWrapperOne.offsetHeight;
-    await delay(50000);
-    secWrapperTens.style.animation = 'none';
-    secWrapperTens.offsetHeight;
-    await delay(9000);
-    secWrapperOne.style.animation = 'none';
-    secWrapperOne.offsetHeight;
-    await delay(900);
-    hunWrapperTens.style.animation = 'none';
-    hunWrapperTens.offsetHeight;
-    await delay(90);
-    hunWrapperOne.style.animation = 'none';
-    hunWrapperOne.offsetHeight;
-};
-
-// arrête les animations
-const pause50Min = async () => {
-    await delay(2400000);
-    minWrapperTens.style.animation = 'none';
-    minWrapperTens.offsetHeight;
-    await delay(540000);
-    minWrapperOne.style.animation = 'none';
-    minWrapperOne.offsetHeight;
-    await delay(50000);
-    secWrapperTens.style.animation = 'none';
-    secWrapperTens.offsetHeight;
-    await delay(9000);
-    secWrapperOne.style.animation = 'none';
-    secWrapperOne.offsetHeight;
-    await delay(900);
-    hunWrapperTens.style.animation = 'none';
-    hunWrapperTens.offsetHeight;
-    await delay(90);
-    hunWrapperOne.style.animation = 'none';
-    hunWrapperOne.offsetHeight;
-};
-
-// arrête les animations
-const pause60Min = async () => {
-    await delay(3000000);
-    minWrapperTens.style.animation = 'none';
-    minWrapperTens.offsetHeight;
-    await delay(540000);
-    minWrapperOne.style.animation = 'none';
-    minWrapperOne.offsetHeight;
-    await delay(50000);
-    secWrapperTens.style.animation = 'none';
-    secWrapperTens.offsetHeight;
-    await delay(9000);
-    secWrapperOne.style.animation = 'none';
-    secWrapperOne.offsetHeight;
-    await delay(900);
-    hunWrapperTens.style.animation = 'none';
-    hunWrapperTens.offsetHeight;
-    await delay(90);
-    hunWrapperOne.style.animation = 'none';
-    hunWrapperOne.offsetHeight;
-};
+}
 
 // préparation des fin d'animations
 if (min === 10) {
-    minWrapperTens.style.animation = 'none';
-    minWrapperTens.style.animationPlayState = 'paused';
-    pause10Min();
+    pauseMin(0);
 } else if (min === 20) {
-    pause20Min();
+    pauseMin(1200000);
 } else if (min === 30) {
-    pause30Min()
+    pauseMin(1800000);
 } else if (min === 40) {
-    pause40Min()
+    pauseMin(2400000);
 } else if (min === 50) {
-    pause50Min()
+    pauseMin(3000000);
 } else if (min === 60) {
-    pause60Min()
+    pauseMin(3600000);
 }
